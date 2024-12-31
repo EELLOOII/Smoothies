@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import Create from "./pages/Create"
 import Update from "./pages/Update"
-
+import Error from "./pages/Error"
+import Template from "./pages/Template"
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<Create />} />
         <Route path="/:id" element={<Update />} />
+        <Route path="/error" element={<Error />} />
+        <Route path="/template" element={<Template />} />
       </Routes>
     </BrowserRouter>
   );
