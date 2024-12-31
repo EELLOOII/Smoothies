@@ -10,6 +10,7 @@ const Update = () => {
   const [method, setMethod] = useState('')
   const [rating, setRating] = useState('')
   const [formError, setFormError] = useState(null)
+  const [loading, setLoading] = useState(true) // Add loading state
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -52,7 +53,7 @@ const Update = () => {
         .single()
 
       if (error) {
-        navigate("/", { replace: true })
+        navigate("/error", { replace: true })
       }
 
       if (data) {
@@ -61,10 +62,18 @@ const Update = () => {
         setMethod(data.method)
         setRating(data.rating)
       }
+      
+      setTimeout(() => {
+        setLoading(false)
+      }, 1000)
     }
 
     fetchSmoothie()
   },[id, navigate])
+
+  if (loading) {
+   return <div className="spin"></div>
+  }
 
   return (
     <div className="page update">
