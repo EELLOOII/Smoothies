@@ -24,6 +24,7 @@ const SmoothieCard = ({ smoothie, onDelete }) => {
         <div className="smoothie-card">
             <h3>{smoothie.title}</h3>
             <p>{smoothie.method}</p>
+            <p>Added at: {new Date(smoothie.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
             <div className="rating">{smoothie.rating}</div>
             <div className="buttons">
                 <Link to={`/${smoothie.id}`}>
