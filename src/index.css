@@ -95,3 +95,6 @@ form button {
   border-radius: 50%;
   cursor: pointer;
 }
+.smoothie-card .material-icons:hover {
+  color: #333;
+}
