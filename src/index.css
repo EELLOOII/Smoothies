@@ -23,6 +23,7 @@ nav a {
   color: #f2f2f2;
   margin: 10px;
   display: inline-block;
+  text-decoration: none;
 }
 nav h1 {
   color: #fff;
@@ -97,4 +98,65 @@ form button {
 }
 .smoothie-card .material-icons:hover {
   color: #333;
+}
+.order-by-container button {
+  margin-right: 10px;
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+.order-by-container button:hover {
+  transform: scale(1.1); /* Increase size by 10% */
+  transition: transform 0.2s ease; /* Add a smooth transition effect */
+}
+.order-by-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.order-by-text {
+  margin-right: 10px;
+}
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.error-page i {
+  font-size: 100px;
+  color: red;
+  margin-bottom: 0;
+}
+.error-page p {
+  font-size: 50px;
+  font-weight: 20px;
+  margin-top: 0;
+}
+.error-page span {
+  color: red;
+  font-weight: 600;
+}
+.loading {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  font-size: large;
+}
+.spin {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 30px auto;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-top-color: var(--primary);
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  to { transform: rotateZ(360deg) }
 }
